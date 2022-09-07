@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "millersplanet",
+  "address": "0x1f7972a40f8129a311e6c6a089f87347adc0e244",
+  "risk": "2",
+  "title": " Improper access control leading possible denial of service",
+  "issueId": 7,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/7"
+}
