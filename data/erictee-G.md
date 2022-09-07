@@ -211,6 +211,14 @@ src/governance/treasury/Treasury.sol:L162            for (uint256 i = 0; i < num
 
 ```
 
+### [G-09] Public functions not called by the contract should be declared external instead
 
 
+#### Impact
+public functions that are never called by the contract should be declared external to save gas.
+
+
+#### Findings:
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/token/ERC721Votes.sol#L45
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/token/ERC721Votes.sol#L59
 
