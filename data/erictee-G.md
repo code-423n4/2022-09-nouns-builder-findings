@@ -221,27 +221,6 @@ src/governance/treasury/Treasury.sol:L162            for (uint256 i = 0; i < num
 
 ```
 
-### [G-09] ```++i```/```i++``` should be ```unchecked{++i}```/```unchecked{i++}``` when it is not possible for them to overflow, as is the case when used in for- and while-loops.
 
 
-#### Impact
-The ```unchecked``` keyword is new in solidity version 0.8.0, so this only applies to that version or higher, which these instances are. This saves 30-40 gas per loop.
 
-
-#### Findings:
-```
-src/token/Token.sol:L80            for (uint256 i; i < numFounders; ++i) {
-
-src/token/Token.sol:L261            for (uint256 i; i < numFounders; ++i) founders[i] = founder[i];
-
-src/token/metadata/MetadataRenderer.sol:L119            for (uint256 i = 0; i < numNewProperties; ++i) {
-
-src/token/metadata/MetadataRenderer.sol:L133            for (uint256 i = 0; i < numNewItems; ++i) {
-
-src/token/metadata/MetadataRenderer.sol:L189            for (uint256 i = 0; i < numProperties; ++i) {
-
-src/token/metadata/MetadataRenderer.sol:L229            for (uint256 i = 0; i < numProperties; ++i) {
-
-src/governance/treasury/Treasury.sol:L162            for (uint256 i = 0; i < numTargets; ++i) {
-
-```
