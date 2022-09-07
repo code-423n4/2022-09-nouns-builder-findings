@@ -18,3 +18,13 @@ src/token/Token.sol:L188            _mint(tokenRecipient[baseTokenId].wallet, _t
 src/lib/token/ERC721.sol:L191    function _mint(address _to, uint256 _tokenId) internal virtual {
 
 ```
+
+### [L-02] Missing zero address check
+
+
+#### Impact
+Zero-address checks as input validation closest to the function beginning is a best-practice.
+
+
+#### Findings:
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L97
