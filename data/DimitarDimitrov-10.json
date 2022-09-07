@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "DimitarDimitrov",
+  "address": "0x6e8cd81029361d213b8d2d5b2d2064384618fd1f",
+  "risk": "3",
+  "title": "we assume that 1 ETH is equal to 1 WETH",
+  "issueId": 10,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/10"
+}
