@@ -27,12 +27,16 @@ Zero-address checks as input validation closest to the function beginning is a b
 
 
 #### Findings:
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L31
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L97
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L39-L42
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L41-L43
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L76
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L32-L34
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/manager/Manager.sol#L62-L66
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/metadata/MetadataRenderer.sol#L33
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/metadata/MetadataRenderer.sol#L65-L69
+
 
 ### [L-03] Use of ```ecrecover``` is susceptible to signature malleability
 
