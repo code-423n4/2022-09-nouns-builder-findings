@@ -62,16 +62,6 @@ The code should be refactored such that they no longer exist, or the block shoul
 
 #### Findings:
 ```
-src/manager/Manager.sol:L209    function _authorizeUpgrade(address _newImpl) internal override onlyOwner {}
-
-src/lib/token/ERC721.sol:L54    function tokenURI(uint256 _tokenId) public view virtual returns (string memory) {}
-
-src/lib/token/ERC721.sol:L57    function contractURI() public view virtual returns (string memory) {}
-
-src/lib/token/ERC721.sol:L239    ) internal virtual {}
-
-src/lib/token/ERC721.sol:L249    ) internal virtual {}
-
 src/governance/treasury/Treasury.sol:L269    receive() external payable {}
 ```
 
