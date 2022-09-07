@@ -61,7 +61,7 @@ There is no need for boolean comprasions, so l am going to delete the "true".
 
 // Note that the b) method can't be used at the same time with the "2. Storing "auction.settled" into bool cache ", this here saves a lot more gas than the bool cache. 
 
-4. l am going to do few changes in these five functions, and l don't want to describe them separately. So l will form them into one report here:
+4. l am going to do few changes in these functions, and l don't want to describe them separately. So l will form them into one report here:
 
 -In the function cancle() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L353
 
@@ -109,9 +109,63 @@ b) same as the last function, the boolean comprasions is no needed and therefore
 -In the function propose() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L116
 
 a) l am going to create two caches for the arrays "_value.length" and "_calldata.length"
-(Add) + uint256 numValue = _values.length;
-(Add) + uint256 numCalldatas = _calldatas.length;
+(Add) 133: + uint256 numValue = _values.length;
+(Add) 134: + uint256 numCalldatas = _calldatas.length;
 (Before) 138: if (numTargets != _values.length) revert PROPOSAL_LENGTH_MISMATCH();
 (After) 138: if (numTargets != numValue) revert PROPOSAL_LENGTH_MISMATCH();
 (Before) 139: if (numTargets != _calldatas.length) revert PROPOSAL_LENGTH_MISMATCH();
 (After) 139: if (numTargets != numCalldatas) revert PROPOSAL_LENGTH_MISMATCH();
+
+-In the function queue() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/treasury/Treasury.sol#L116
+
+a) l am going to create an uint cache, which will hold timestamps[_proposalId].
+(Add) 126: + uint _timestamps = timestamps[_proposalId];
+(Before) 127: timestamps[_proposalId] = eta;
+(After) 127: _timestamps = eta;
+
+-In the function execute() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/treasury/Treasury.sol#L141
+
+a) l am going to create and uint cache, which will hold timestamps[proposalId]
+(Add) 153: + uint _timestamps = timestamps[proposalId];
+(Before) 154: delete timestamps[proposalId];
+(After) 154: delete _timestamps;
+
+b) setting variables as their default values is unnecessary and wastes gas.
+(Before) 162: for (uint256 i = 0; i < numTargets; ++i) {
+(After) 162: for (uint256 i; i < numTargets; ++i) {
+
+-In the function cancel() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/treasury/Treasury.sol#L180
+
+a) l am going to create and uint cache, which will hold timestamps[proposalId]
+(Add) 184: + uint _timestamps = timestamps[_proposalId];
+(Before) 185: delete timestamps[_proposalId];
+(After) 185: delete _timestamps;
+
+-In the function _addFounders() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/Token.sol#L71
+
+a)  ">=" cost less gas than ">"
+(Before) 88: if ((totalOwnership += uint8(founderPct)) > 100) revert INVALID_FOUNDER_OWNERSHIP();
+(After) 88: if ((totalOwnership += uint8(founderPct)) >= 101) revert INVALID_FOUNDER_OWNERSHIP();
+
+b) l am going to create a storage for the struct "Founder", which will replace "tokenRecipient[baseTokenId]".
+(Add) 112: + Founder storage _tokenRecipient = tokenRecipient[baseTokenId];
+(Before) 113: tokenRecipient[baseTokenId] = newFounder;
+(After) 113: _tokenRecipient = newFounder;
+
+-In the function _getNextTokenId() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/Token.sol#L130
+
+a) l am going to create a storage for the struct "Founder", which will replace "tokenRecipient[_tokenId]"
+(Add) 131: +Founder storage _tokenRecipient = tokenRecipient[_tokenId]; 
+(Before) 132: while (tokenRecipient[_tokenId].wallet != address(0)) ++_tokenId;
+(After) 132: while (_tokenRecipient.wallet != address(0)) ++_tokenId;
+
+-In the function _isForFounder() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/Token.sol#L177
+
+a)  l am going to create a storage for the struct "Founder", which will replace "tokenRecipient[baseTokenId]"
+(Add) 181: + Founder storage _tokenRecipient = tokenRecipient[baseTokenId];
+(Before) 182: if (tokenRecipient[baseTokenId].wallet == address(0)) {
+(After) 182: if (_tokenRecipient.wallet == address(0)) {
+(Before) 186: } else if (block.timestamp < tokenRecipient[baseTokenId].vestExpiry) {
+(After) 186: } else if (block.timestamp < _tokenRecipient.vestExpiry) {
+(Before) 188: _mint(tokenRecipient[baseTokenId].wallet, _tokenId);
+(After) 188: _mint(_tokenRecipient.wallet, _tokenId);
