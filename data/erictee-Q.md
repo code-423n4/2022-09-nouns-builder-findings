@@ -29,3 +29,5 @@ Zero-address checks as input validation closest to the function beginning is a b
 #### Findings:
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L97
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L39-L42
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L41-L43
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L76
