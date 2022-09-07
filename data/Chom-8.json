@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Chom",
+  "address": "0xc4c459668fb29833d7dee997d7d347e2634c9cef",
+  "risk": "2",
+  "title": "Missing minimum and maximum votingDelay, votingPeriod and proposalThresholdBps checks. User may set unexpected parameters like proposalThresholdBps = 0 to bypass the minimum nft check.",
+  "issueId": 8,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/8"
+}
