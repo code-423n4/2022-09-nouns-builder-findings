@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "khatakey",
+  "address": "0x9e6d205afbf66b22bb4b6fea442a5fee4535920f",
+  "risk": "2",
+  "title": "Use call() instead of transfer() when transferring ETH in Auction.sol",
+  "issueId": 24,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/24"
+}
