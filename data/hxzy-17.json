@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "hxzy",
+  "address": "0x9ad2a8483924056bbd78c3a8cafe6fc45166692c",
+  "risk": "2",
+  "title": "There is a vote brushing problem in voting in the Token contract",
+  "issueId": 17,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/17"
+}
