@@ -31,6 +31,8 @@ https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.so
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L39-L42
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L41-L43
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L76
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L32-L34
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/manager/Manager.sol#L62-L66
 
 ### [L-03] Use of ```ecrecover``` is susceptible to signature malleability
 
