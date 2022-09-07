@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Tointer",
+  "address": "0xb23c6962c431524c154b3ea088fc3ca0dc4b0b94",
+  "risk": "2",
+  "title": "Wrong proposalThreshold and quorumThreshold due to token.totalSupply() counting burned tokens",
+  "issueId": 46,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/46"
+}
