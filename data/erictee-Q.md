@@ -31,3 +31,20 @@ https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.so
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L39-L42
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L41-L43
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L76
+
+### [L-03] Use of ```ecrecover``` is susceptible to signature malleability
+
+
+#### Impact
+The ```ecrecover``` function is used to recover the address from the signature. The built-in EVM precompile ecrecover is susceptible to signature malleability which could lead to replay attacks (references: https://swcregistry.io/docs/SWC-117, https://swcregistry.io/docs/SWC-121 and https://medium.com/cryptronics/signature-replay-vulnerabilities-in-smart-contracts-3b6f7596df57).
+
+Consider using OpenZeppelin’s ECDSA library (which prevents this malleability) instead of the built-in function.
+
+
+#### Findings:
+```
+src/lib/token/ERC721Votes.sol:L167        address recoveredAddress = ecrecover(digest, _v, _r, _s);
+
+src/governance/governor/Governor.sol:L236        address recoveredAddress = ecrecover(digest, _v, _r, _s);
+
+```
