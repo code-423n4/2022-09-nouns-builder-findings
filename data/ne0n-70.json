@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ne0n",
+  "address": "0x231bb4f4c7128789daf5b1c68bdda2b6a40a69c8",
+  "risk": "2",
+  "title": " Risk of loss of precision in division operations",
+  "issueId": 70,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/70"
+}
