@@ -169,3 +169,36 @@ a) l am going to create a storage for the mapping "Founder", which will replace 
 (After) 186: } else if (block.timestamp < _tokenRecipient.vestExpiry) {
 (Before) 188: _mint(tokenRecipient[baseTokenId].wallet, _tokenId);
 (After) 188: _mint(_tokenRecipient.wallet, _tokenId);
+
+-In the function addProperties() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/metadata/MetadataRenderer.sol#L91
+
+a) No need to explicitly initialize variables with default values:
+(Before) 119: for (uint256 i = 0; i < numNewProperties; ++i) {
+(After) 119: for (uint256 i; i < numNewProperties; ++i) {
+(Before) 133: for (uint256 i = 0; i < numNewItems; ++i) {
+(After) 133: for (uint256 i; i < numNewItems; ++i) {
+
+-In the function onMinted() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/metadata/MetadataRenderer.sol#L171
+
+a) No need to explicitly initialize variables with default values:
+(Before) 189: for (uint256 i = 0; i < numProperties; ++i) {
+(After) 189: for (uint256 i; i < numProperties; ++i) {
+
+b) creating a uint cache, which will hold "tokenAttributes[i + 1]"
+(Add) 193: + uint256 _tokenAttributes = tokenAttributes[i + 1];
+(Before) 194: tokenAttributes[i + 1] = uint16(seed % numItems);
+(After) 194: _tokenAttributes = uint16(seed % numItems);
+
+-In the function getAttributes() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/metadata/MetadataRenderer.sol#L206
+
+a) Using storage pointer instead of memory location can save a decent amount of gas.
+(Before) 216: uint16[16] memory tokenAttributes = attributes[_tokenId];
+(After) 216: uint16[16] storage tokenAttributes = attributes[_tokenId];
+(Before) 234: Property memory property = properties[i];
+(After) 234: Property storage property = properties[i];
+(Before) 240: Item memory item = property.items[attribute];
+(After) 240: Item storage item = property.items[attribute];
+
+b) No need to explicitly initialize variables with default values:
+(Before) 229: for (uint256 i = 0; i < numProperties; ++i) {
+(After) 229: for (uint256 i; i < numProperties; ++i) {
