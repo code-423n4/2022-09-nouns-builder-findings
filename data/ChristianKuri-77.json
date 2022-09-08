@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ChristianKuri",
+  "address": "0xa0ba6055d99ef62e5ed2f9a1d21fb9d89558ea90",
+  "risk": "2",
+  "title": "New bid could not refund previous bid, making the previous bidder lose funds.",
+  "issueId": 77,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/77"
+}
