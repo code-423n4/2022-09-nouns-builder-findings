@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ladboy233",
+  "address": "0xe1faaeb0d29c9cf411cbd47daab14a21ebe266a4",
+  "risk": "3",
+  "title": "missing 0 tokenId check in auction contract can result in denial of service if a malicious user call createBid with token Id 0.",
+  "issueId": 66,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/66"
+}
