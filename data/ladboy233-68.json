@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ladboy233",
+  "address": "0xe1faaeb0d29c9cf411cbd47daab14a21ebe266a4",
+  "risk": "3",
+  "title": "metadata renderer onMint hook can fail sliently when generating nft property while nft mint succeed, result in failure to render the metadata when calling tokenURI(tokenId)",
+  "issueId": 68,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/68"
+}
