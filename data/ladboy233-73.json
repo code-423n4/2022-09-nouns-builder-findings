@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ladboy233",
+  "address": "0xe1faaeb0d29c9cf411cbd47daab14a21ebe266a4",
+  "risk": "2",
+  "title": "Centralization risk: admin can adjust important parameters or rug the project.",
+  "issueId": 73,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/73"
+}
