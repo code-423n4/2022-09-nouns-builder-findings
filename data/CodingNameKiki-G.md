@@ -1,4 +1,4 @@
-1. Storing "setting.timebuffer" into uint cache in the function createBid() can save a decent amount of gas.
+1. Storing "setting.timebuffer" into uint cache in the function createBid() can save gas.
 
 In the following function, setting.timebuffer should be cached as it is read several times.
 
@@ -10,7 +10,7 @@ src/auction/Auction.sol
 (Before) 149: auction.endTime = uint40(block.timestamp + settings.timeBuffer);
 (After) 149: auction.endTime = uint40(block.timestamp + cache);
 
-2. Storing "auction.settled" into bool cache in the function _settleAuction() can save a decent amount of gas.
+2. Storing "auction.settled" into bool cache in the function _settleAuction() can save gas.
 
 In the following function, auction.settled should be cached as it is read several times
 
@@ -61,7 +61,7 @@ There is no need for boolean comprasions, so l am going to delete the "true".
 
 // Note that the b) method can't be used at the same time with the "2. Storing "auction.settled" into bool cache ", this here saves a lot more gas than the bool cache. 
 
-4. l am going to do few changes in these functions, and l don't want to describe them separately. So l will form them into one report here:
+4. l am going to do few changes in these functions. And l think it's better to form them into one report here:
 
 -In the function cancle() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L353
 
@@ -69,7 +69,7 @@ a) l am going to replace the memory location with storage:
 (Before) 358: Proposal memory proposal = proposals[_proposalId];
 (After) 358: Proposal storage proposal = proposals[_proposalId];
 
-b) After that l will use the storage proposal on: 
+b) After that l will replace the "proposals[_proposalId].canceled" with the storage variable "proposal", instead of fetching the reference in a map or an array: 
 (Before) 368: proposals[_proposalId].canceled = true;
 (After) 368: proposal.canceled = true;
 
@@ -154,14 +154,14 @@ b) l am going to create a storage for the struct "Founder", which will replace "
 
 -In the function _getNextTokenId() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/Token.sol#L130
 
-a) l am going to create a storage for the struct "Founder", which will replace "tokenRecipient[_tokenId]"
+a) l am going to create a storage for the mapping "Founder", which will replace "tokenRecipient[_tokenId]", instead of repeatedly fetching the reference in a map or an array.
 (Add) 131: +Founder storage _tokenRecipient = tokenRecipient[_tokenId]; 
 (Before) 132: while (tokenRecipient[_tokenId].wallet != address(0)) ++_tokenId;
 (After) 132: while (_tokenRecipient.wallet != address(0)) ++_tokenId;
 
 -In the function _isForFounder() - https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/Token.sol#L177
 
-a)  l am going to create a storage for the struct "Founder", which will replace "tokenRecipient[baseTokenId]"
+a) l am going to create a storage for the mapping "Founder", which will replace "tokenRecipient[baseTokenId]", instead of repeatedly fetching the reference in a map or an array.
 (Add) 181: + Founder storage _tokenRecipient = tokenRecipient[baseTokenId];
 (Before) 182: if (tokenRecipient[baseTokenId].wallet == address(0)) {
 (After) 182: if (_tokenRecipient.wallet == address(0)) {
