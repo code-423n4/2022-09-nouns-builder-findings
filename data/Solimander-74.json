@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Solimander",
+  "address": "0xe26d78c6bff297bbc2da3f80fea9a42028a4260f",
+  "risk": "2",
+  "title": "Proposal can pass with no votes (Proposal will pass in the event of a tie)",
+  "issueId": 74,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/74"
+}
