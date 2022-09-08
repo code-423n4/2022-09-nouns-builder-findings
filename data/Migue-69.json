@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Migue",
+  "address": "0xd6727533cd753b92c0933197845a9b95e0ff9b62",
+  "risk": "2",
+  "title": "MetadataRenderer contract raise error when minting",
+  "issueId": 69,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/69"
+}
