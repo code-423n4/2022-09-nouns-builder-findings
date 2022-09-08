@@ -78,4 +78,39 @@ https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a
 https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/metadata/MetadataRenderer.sol#L189
 https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/metadata/MetadataRenderer.sol#L229
 
-7. 
+7. Make a decent gas savings by saving a storage variable's reference instead of repeatedly fetching it
+
+Declare a storage type variable and use it instead of repeatedly fetching the reference in a map or an array.
+Instead of repeatedly calling someMap[someIndex], save its reference like this: SomeStruct storage someStruct = someMap[someIndex] and use it.
+
+File: Token.sol
++112: Founder storage _tokenRecipient = tokenRecipient[baseTokenId];
+-113: tokenRecipient[baseTokenId] = newFounder;
++113: _tokenRecipient = newFounder;
+
+File: Token.sol
++131: Founder storage _tokenRecipient = tokenRecipient[_tokenId];
+-132: while (tokenRecipient[_tokenId].wallet != address(0)) ++_tokenId;
++132: while (_tokenRecipient.wallet != address(0)) ++_tokenId;
+
+File: Token.sol
++181: Founder storage _tokenRecipient = tokenRecipient[baseTokenId];
+-182: if (tokenRecipient[baseTokenId].wallet == address(0)) {
++182: if (_tokenRecipient.wallet == address(0)) {
+-186: } else if (block.timestamp < tokenRecipient[baseTokenId].vestExpiry) {
++186: } else if (block.timestamp < _tokenRecipient.vestExpiry) {
+-188: _mint(tokenRecipient[baseTokenId].wallet, _tokenId);
++188: _mint(_tokenRecipient.wallet, _tokenId);
+
+8. keccak256() should only need to be called on a specific string literal once
+
+It should be saved to an immutable variable, and the variable used instead. If the hash is being used as a part of a function selector, the cast to bytes should also only be done once
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L142
+
+9. Using bools for storage incurs overhead
+
+(https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f635312aa21f947cae5f8578638a85aa2519f5/contracts/security/ReentrancyGuard.sol#L23-L27)
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/auction/Auction.sol#L136
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/auction/Auction.sol#L349
