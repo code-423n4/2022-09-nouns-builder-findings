@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "khatakey",
+  "address": "0x9e6d205afbf66b22bb4b6fea442a5fee4535920f",
+  "risk": "2",
+  "title": "Empty receive function with no way to retrieve in Treasury contract",
+  "issueId": 62,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/62"
+}
