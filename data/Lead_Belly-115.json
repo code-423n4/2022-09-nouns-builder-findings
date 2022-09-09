@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Lead_Belly",
+  "address": "0x2d3345527bf47b1753bb93508ddb66796f0f756f",
+  "risk": "3",
+  "title": "_handleOutgoingTransfer() does not verify that tokens were transferred successfully.",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/115"
+}
