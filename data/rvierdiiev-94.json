@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rvierdiiev",
+  "address": "0x1a5adee23ffbdef58d41c1addac2521ca600b950",
+  "risk": "3",
+  "title": "Owners receive more percentage of total nft if some nfts were burned(because were not sold)",
+  "issueId": 94,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/94"
+}
