@@ -1,0 +1,1 @@
+- In `Governer.propose`, the value of `proposalThreshold()` is first cached, but the function is then executed again (https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/governance/governor/Governor.sol#L128). Consider using the cached value.
