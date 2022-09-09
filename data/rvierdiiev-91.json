@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rvierdiiev",
+  "address": "0x1a5adee23ffbdef58d41c1addac2521ca600b950",
+  "risk": "2",
+  "title": "Changing settings.timeBuffer, settings.minBidIncrement and settings.reservePrice has impact on auction that is going on",
+  "issueId": 91,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/91"
+}
