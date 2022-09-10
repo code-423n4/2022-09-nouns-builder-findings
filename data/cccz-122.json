@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "cccz",
+  "address": "0x74d754378a59ab45d3e6cac83f0b87e8e8719270",
+  "risk": "2",
+  "title": "When the user's votes are equal to proposalThreshold(), the user can create a proposal, but it can be cancelled",
+  "issueId": 122,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/122"
+}
