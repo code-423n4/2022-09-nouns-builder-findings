@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "R2",
+  "address": "0xfc0aa76d96a80937288968ade92b6cfcb9ab7f17",
+  "risk": "2",
+  "title": "DoS in case of Auction.WETH = 0 (there are no checks)",
+  "issueId": 138,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/138"
+}
