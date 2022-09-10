@@ -1,0 +1,1 @@
+msg.value is used in Governor.sol and Auction.sol, so there is no need to put the word "payable" for the other constructors of the contract.
