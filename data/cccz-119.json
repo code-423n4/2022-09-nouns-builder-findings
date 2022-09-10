@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "cccz",
+  "address": "0x74d754378a59ab45d3e6cac83f0b87e8e8719270",
+  "risk": "3",
+  "title": "Governor: The return value of proposalThreshold() and quorum() may be 0 due to precision loss.",
+  "issueId": 119,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/119"
+}
