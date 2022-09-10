@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "pfapostol",
+  "address": "0x7aed85c78dda77147914c80db417f099e456a8a5",
+  "risk": "3",
+  "title": "A voter can delegate their votes to another account and trigger a double vote.",
+  "issueId": 144,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/144"
+}
