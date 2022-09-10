@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "pcarranzav",
+  "address": "0xff15883a2eeec9c3b74238230c9f898c4d79ba47",
+  "risk": "2",
+  "title": "Founder ownership percentage not properly validated",
+  "issueId": 146,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/146"
+}
