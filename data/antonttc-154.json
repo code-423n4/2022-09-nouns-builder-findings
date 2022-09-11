@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "antonttc",
+  "address": "0x386f6b908640d9f394ef37bc1b8c3a4018fa3db1",
+  "risk": "3",
+  "title": "baseToken registration is implemented wrongly, which leads to founder getting less than what they are entitled for",
+  "issueId": 154,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/154"
+}
