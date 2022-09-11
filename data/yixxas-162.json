@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "yixxas",
+  "address": "0x9079426b034c524ebd6cac9cb78dbe8cb0749f4e",
+  "risk": "3",
+  "title": "_handleOutgoingTransfer() transfer of ETH/WETH back to the bidder can lead to loss of fund if receiving address is not able to receive them",
+  "issueId": 162,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/162"
+}
