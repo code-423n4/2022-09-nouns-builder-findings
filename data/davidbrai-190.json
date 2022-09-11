@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "davidbrai",
+  "address": "0x05a286e5165d72823a749b00b009a2af0dc36ff7",
+  "risk": "3",
+  "title": "Proposal threshold is zero until there is enough tokens, allowing to spam with proposals for users without tokens",
+  "issueId": 190,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/190"
+}
