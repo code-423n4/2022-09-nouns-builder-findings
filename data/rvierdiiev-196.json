@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rvierdiiev",
+  "address": "0x1a5adee23ffbdef58d41c1addac2521ca600b950",
+  "risk": "2",
+  "title": "Tokens could be minted without metadata. MetadataRenderer::onMinted will not revert even if MetadataRenderer::addProperties was not called before.",
+  "issueId": 196,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/196"
+}
