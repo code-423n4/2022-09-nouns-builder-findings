@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "berndartmueller",
+  "address": "0x6a897b32996d342535791a74b8a40e75ddf2486e",
+  "risk": "3",
+  "title": "NFT owner can double the number of votes by self-delegating",
+  "issueId": 186,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/186"
+}
