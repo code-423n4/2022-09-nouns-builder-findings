@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "fatherOfBlocks",
+  "address": "0xd5a2686b02a15b5269848dee6e913f07f459782e",
+  "risk": "2",
+  "title": "DoS in the update of the delay by revert that always happens",
+  "issueId": 158,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/158"
+}
