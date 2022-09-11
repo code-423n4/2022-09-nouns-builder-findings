@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "davidbrai",
+  "address": "0x05a286e5165d72823a749b00b009a2af0dc36ff7",
+  "risk": "2",
+  "title": "Proposal voting uses created time for snapshots instead of once voting is active",
+  "issueId": 202,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/202"
+}
