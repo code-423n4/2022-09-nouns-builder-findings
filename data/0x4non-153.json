@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "0x4non",
+  "address": "0x38c40ead3d0fe7959eb9dfe8337b3c4929884d2c",
+  "risk": "2",
+  "title": "No validation on `proposalThresholdBps` and `quorumThresholdBps` it could break governance",
+  "issueId": 153,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/153"
+}
