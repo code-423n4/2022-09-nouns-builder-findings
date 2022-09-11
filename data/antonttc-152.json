@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "antonttc",
+  "address": "0x386f6b908640d9f394ef37bc1b8c3a4018fa3db1",
+  "risk": "3",
+  "title": "Malicious owner can create DAO which owns more percentage than claimed",
+  "issueId": 152,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/152"
+}
