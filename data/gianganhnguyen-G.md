@@ -71,6 +71,7 @@ Becomes:
 From:
 
     if (auction.tokenId == 0) {
+       transferOwnership(settings.treasury);
         ...
     }
         // Else if the contract was paused and the previous auction was settled:
@@ -80,7 +81,9 @@ From:
 Becomes:
 
     Auction  memory _auction = auction;
+    Settings memory _settings= settings;
     if (_auction.tokenId == 0) {
+       transferOwnership(_settings.treasury);
         ...
     }
     // Else if the contract was paused and the previous auction was settled:
