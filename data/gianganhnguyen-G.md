@@ -1,0 +1,100 @@
+# 1. [G-1] Token._addFounders(): Update memory instead of storage variable
+
+From:
+
+    for (uint256 i; i < numFounders; ++i) {
+       ...
+       // Compute the founder's id
+      uint256 founderId = settings.numFounders++;
+       ...
+    }
+
+Becomes:
+
+    uint256 settingNumFounders = settings.numFounders;
+    for (uint256 i; i < numFounders; ++i) {
+        ...
+         // Compute the founder's id
+        uint256 founderId = settingNumFounders++;
+        ...
+    }
+    settings.numFounders = settingNumFounders;
+
+
+# 2. [G-2] Token._addFounders(): No sign effect in % 100
+
+    (baseTokenId += schedule) % 100;
+
+# 3. [G-3] Token.mint(): Update memory instead of storage variable
+From:
+
+    unchecked {
+       do {
+         // Get the next token to mint
+         tokenId = settings.totalSupply++;
+         // Lookup whether the token is for a founder, and mint accordingly if so
+	} while (_isForFounder(tokenId));
+   }
+
+Becomes:
+
+    unchecked {
+      uint256 totalSupply = setting.totalSupply;
+      do {
+        // Get the next token to mint
+        tokenId = totalSupply++;
+        // Lookup whether the token is for a founder, and mint accordingly if so
+      } while (_isForFounder(tokenId));
+      setting.totalSupply = totalSupply;
+    }
+
+
+# 4. [G-4] Auction.createBid(): Using memory of 'settings' instead of 'settings' storage variable
+Add line:
+
+    Settings memory _settings = settings;
+Then changes:
+
+    settings.reservePrice => _settings.reservePrice;
+    settings.minBidIncrement => _settings.minBidIncrement;
+    settings.timeBuffer => _settings.timeBuffer;
+
+# 5. [G-5] Auction._settleAuction(): Using memory instead of storage variable
+From line:
+
+    if (auction.settled) revert AUCTION_SETTLED();
+
+Becomes:
+
+    if (_auction.settled) revert AUCTION_SETTLED();
+
+# 6. [G-6] Auction.unpause(): Using memory instead of storage variable
+From:
+
+    if (auction.tokenId == 0) {
+        ...
+    }
+        // Else if the contract was paused and the previous auction was settled:
+        else if (auction.settled) {
+        ...
+     }
+Becomes:
+
+    Auction  memory _auction = auction;
+    if (_auction.tokenId == 0) {
+        ...
+    }
+    // Else if the contract was paused and the previous auction was settled:
+    else if (_auction.settled) {
+        ...
+    }
+
+# 7. [G-7] Treasury.isReady(): Using memory instead of storage variable
+From:
+
+    return timestamps[_proposalId] != 0 && block.timestamp >= timestamps[_proposalId];
+
+Becomes:
+
+    uint256 timeStamp = timestamps[_proposalId];
+    return timeStamp != 0 && block.timestamp >= timeStamp;
