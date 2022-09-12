@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Rolezn",
+  "address": "0xf6850e8f677d320159bb8c84f40dd136d03a2ebb",
+  "risk": "2",
+  "title": "There is no way to settle an ongoing auction if a human error occurred that inputted an incorrect value for settings.duration by mistake, i.e. additional digit in the value",
+  "issueId": 211,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/211"
+}
