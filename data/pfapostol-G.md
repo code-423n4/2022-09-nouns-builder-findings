@@ -27,7 +27,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    It may not be obvious, but every time you copy a storage `struct`/`array`/`mapping` to a `memory` variable, you are copying each member by reading it from `storage`, which is expensive. And when you use the `storage` keyword, you are just storing a pointer to the storage, which is much cheaper.
    Exception: case when you need to read all or many members multiple times. In report included only cases that saved gas
 
-   - src/auction/Auction.sol
+   - [src/auction/Auction.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol)
 
    ```diff
    diff --git a/src/auction/Auction.sol b/src/auction/Auction.sol
@@ -45,7 +45,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
       95,  95:         if (_auction.tokenId != _tokenId) revert INVALID_TOKEN_ID();
    ```
 
-   - src/governance/governor/Governor.sol
+   - [src/governance/governor/Governor.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol)
 
    ```diff
    diff --git a/src/governance/governor/Governor.sol b/src/governance/governor/Governor.sol
@@ -77,7 +77,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
      511, 511:     }
    ```
 
-   - src/lib/token/ERC721Votes.sol
+   - [src/lib/token/ERC721Votes.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/token/ERC721Votes.sol)
 
    ```diff
    diff --git a/src/lib/token/ERC721Votes.sol b/src/lib/token/ERC721Votes.sol
@@ -95,7 +95,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
       93,  93:             while (high > low) {
    ```
 
-   - src/token/metadata/MetadataRenderer.sol
+   - [src/token/metadata/MetadataRenderer.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/metadata/MetadataRenderer.sol)
 
    ```diff
    diff --git a/src/token/metadata/MetadataRenderer.sol b/src/token/metadata/MetadataRenderer.sol
@@ -117,7 +117,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
 
    Saved in deploy: 25433, but lost 100-300 gas per user
 
-   - src/governance/governor/Governor.sol
+   - [src/governance/governor/Governor.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol)
 
    ```diff
    diff --git a/src/governance/governor/Governor.sol b/src/governance/governor/Governor.sol
@@ -149,7 +149,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    Deployment Gas Saved: **99 511**
    `forge snapshot --diff`: **1 080**
 
-   - src/auction/Auction.sol
+   - [src/auction/Auction.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol)
 
    Storage:
 
@@ -291,7 +291,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
 
    SLOADs are expensive (100 gas after the 1st one) compared to MLOADs/MSTOREs (3 gas each). Storage values read multiple times should instead be cached in memory the first time (costing 1 SLOAD) and then read from this cache to avoid multiple SLOADs.
 
-   - src/auction/Auction.sol
+   - [src/auction/Auction.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol)
 
    function: `_settleAuction`: `auction` cached in 169 but readed from storage in 172
    function: `_handleOutgoingTransfer`: `IWETH(WETH)` can be cached
@@ -319,7 +319,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    366, 368:
    ```
 
-   - src/governance/governor/Governor.sol
+   - [src/governance/governor/Governor.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol)
 
    function proposalVotes: There is no need to copy `proposals[_proposalId]` to memory, because you reading every field exactly one time
 
@@ -341,7 +341,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    513, 511:     /// @notice The timestamp valid to execute a proposal
    ```
 
-   - src/governance/treasury/Treasury.sol
+   - [src/governance/treasury/Treasury.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol)
 
    function `isReady`: `timestamps[_proposalId]` can be cached
 
@@ -362,7 +362,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    92,  93:     ///                                                          ///
    ```
 
-   - src/token/Token.sol
+   - [src/token/Token.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol)
 
    function `_isForFounder`: use storage pointer to founder
 
@@ -393,7 +393,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    191, 193:
    ```
 
-   - src/token/metadata/MetadataRenderer.sol
+   - [src/token/metadata/MetadataRenderer.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/metadata/MetadataRenderer.sol)
 
    function `_getItemImage`: complex expression can be cached as storage pointer
 
@@ -435,7 +435,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
 
    NOTE: in some cases, usually in structs, this optimization can cause significant user gas loss, these cases are intentionally excluded from the report
 
-   - src/governance/governor/Governor.sol
+   - [src/governance/governor/Governor.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol)
 
    ```diff
    diff --git a/src/governance/governor/Governor.sol b/src/governance/governor/Governor.sol
@@ -460,7 +460,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
      267, 267:         Proposal storage proposal = proposals[_proposalId];
    ```
 
-   - src/governance/governor/storage/GovernorStorageV1.sol
+   - [src/governance/governor/storage/GovernorStorageV1.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/storage/GovernorStorageV1.sol)
 
    ```diff
    diff --git a/src/governance/governor/storage/GovernorStorageV1.sol b/src/governance/governor/storage/GovernorStorageV1.sol
@@ -476,7 +476,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
       20,  20: }
    ```
 
-   - src/lib/token/ERC721.sol
+   - [src/lib/token/ERC721.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/token/ERC721.sol)
 
    ```diff
    diff --git a/src/lib/token/ERC721.sol b/src/lib/token/ERC721.sol
@@ -530,7 +530,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
      137, 137:
    ```
 
-   - src/lib/utils/Pausable.sol
+   - [src/lib/utils/Pausable.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/utils/Pausable.sol)
 
    ```diff
    diff --git a/src/lib/utils/Pausable.sol b/src/lib/utils/Pausable.sol
@@ -593,8 +593,8 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
       60,  60:     }
    ```
 
-   - src/manager/Manager.sol
-   - src/manager/storage/ManagerStorageV1.sol
+   - [src/manager/Manager.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/manager/Manager.sol)
+   - [src/manager/storage/ManagerStorageV1.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/manager/storage/ManagerStorageV1.sol)
 
    ```diff
    diff --git a/src/manager/Manager.sol b/src/manager/Manager.sol
@@ -631,8 +631,8 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
       11,  11: }
    ```
 
-   - src/token/metadata/MetadataRenderer.sol
-   - src/token/metadata/types/MetadataRendererTypesV1.sol
+   - [src/token/metadata/MetadataRenderer.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/metadata/MetadataRenderer.sol)
+   - [src/token/metadata/types/MetadataRendererTypesV1.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/metadata/types/MetadataRendererTypesV1.sol)
 
    ```diff
    diff --git a/src/token/metadata/MetadataRenderer.sol b/src/token/metadata/MetadataRenderer.sol
@@ -669,7 +669,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    Method Call Gas Saved: **2 602**
    `forge snapshot --diff`: **41 326** Gas Saved
 
-   - src/auction/Auction.sol
+   - [src/auction/Auction.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol)
 
    function: `_settleAuction`: `auction` cached in 169 but readed from storage in 172
 
@@ -689,7 +689,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    175, 175:         if (_auction.startTime == 0) revert AUCTION_NOT_STARTED();
    ```
 
-   - src/governance/governor/Governor.sol
+   - [src/governance/governor/Governor.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol)
 
      function `propose`: `proposalThreshold()` cached in 123, but called again in 128
 
@@ -715,7 +715,7 @@ In this project, the optimizer is set on 500000 runs, so some of the common opti
    Method Call Gas Saved: **174**
    `forge snapshot --diff`: **621** Gas Saved
 
-   - src/governance/governor/Governor.sol
+   - [src/governance/governor/Governor.sol](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol)
 
    ```diff
    diff --git a/src/governance/governor/Governor.sol b/src/governance/governor/Governor.sol
