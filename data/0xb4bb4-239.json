@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "0xb4bb4",
+  "address": "0xEFAD0017ee6bcD0F38a8e559761493aA5C433FEA",
+  "risk": "3",
+  "title": "Bidding on paused auctions results in full refund for auction winner",
+  "issueId": 239,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/239"
+}
