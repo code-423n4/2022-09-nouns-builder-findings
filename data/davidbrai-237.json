@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "davidbrai",
+  "address": "0x05a286e5165d72823a749b00b009a2af0dc36ff7",
+  "risk": "2",
+  "title": "Total founder reward is allowed to be 100, but then minting is broken",
+  "issueId": 237,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/237"
+}
