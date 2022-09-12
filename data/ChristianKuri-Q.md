@@ -1,6 +1,8 @@
 ## [L-01] Front-runnable initializer
 
-If the initializer is not executed in the same transaction as the constructor, a malicious user can front-run the `initialize()` call. In the best case, the owner is forced to waste gas and re-deploy. In the worst case, the owner does not notice that his/her call reverts, and everyone starts using a contract under the control of an attacker
+If the initializer is not executed in the same transaction as the constructor, a malicious user can front-run the `initialize()` call. In the best case, the owner is forced to waste gas and re-deploy. In the worst case, the owner does not notice that his/her call reverts, and everyone starts using a contact that the attacker would have control of (the manager) since he will be the owner.
+
+If the manager contract is initialized before upgrading to v2, the manager proxy would also have incorrect values, and all the contract for the logic of the token, auction, governance, treasury and metadata would have an incorrect manager address. Making the deployer deploy everything again.
 
 [manager/Manager.sol#L80-L86](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/manager/Manager.sol#L80-L86)
 
