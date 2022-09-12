@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "0xA5DF",
+  "address": "0x04dfb55f65e89aaf26bf198ed87fb77a8a2b7260",
+  "risk": "2",
+  "title": "Try-catch block at `Auction._createAuction()` will only catch string errors",
+  "issueId": 240,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/240"
+}
