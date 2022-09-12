@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Soosh",
+  "address": "0xdfb7c8bee3f61b6a2f7c616f850613436b7a747f",
+  "risk": "2",
+  "title": "No access control checks on `deploy()`",
+  "issueId": 226,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/226"
+}
