@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "0xkatana",
+  "address": "0x195d5C9A18348765F2BD62a7dc8D389554a28d82",
+  "risk": "G",
+  "title": "Gas Optimizations",
+  "issueId": 216,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/216"
+}
