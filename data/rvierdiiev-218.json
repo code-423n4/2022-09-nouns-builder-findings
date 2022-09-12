@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rvierdiiev",
+  "address": "0x1a5adee23ffbdef58d41c1addac2521ca600b950",
+  "risk": "3",
+  "title": "Governor allows user to transfer nft and create a proposal, based on that nft's votes in the same block",
+  "issueId": 218,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/218"
+}
