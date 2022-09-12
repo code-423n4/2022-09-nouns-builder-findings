@@ -48,7 +48,6 @@ Becomes:
       setting.totalSupply = totalSupply;
     }
 
-
 # 4. [G-4] Auction.createBid(): Using memory of 'settings' instead of 'settings' storage variable
 Add line:
 
@@ -131,3 +130,37 @@ Becomes:
 
     Founder  memory _founder = founder[_founderId];
     return _founder;
+
+# 11. [G-11] Auction.createBid(): Using memory instead of storage variable
+
+Add line:
+
+    Settings memory _settings = settings;
+
+Update:
+
+    settings.reservePrice => _settings.reservePrice;
+    settings.minBidIncrement=> _settings.minBidIncrement;
+    settings.timeBuffer=> _settings.timeBuffer;
+
+# 12. [G-12] Auction.createBid(): Using local variable for computing value of auction.endTime then using it again
+
+From:
+
+    if (extend) {
+       unchecked {
+         auction.endTime = uint40(block.timestamp + settings.timeBuffer);
+       }
+    }
+    emit AuctionBid(_tokenId, msg.sender, msg.value, extend, auction.endTime);
+
+Becomes:
+
+    uint40 endTime = auction.endTime;
+    if (extend) {
+       unchecked {
+         endTime = uint40(block.timestamp + settings.timeBuffer);
+         auction.endTime = endTime;
+       }
+    }
+    emit AuctionBid(_tokenId, msg.sender, msg.value, extend, endTime);
