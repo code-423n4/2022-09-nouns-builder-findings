@@ -98,3 +98,36 @@ Becomes:
 
     uint256 timeStamp = timestamps[_proposalId];
     return timeStamp != 0 && block.timestamp >= timeStamp;
+
+# 8. [G-8] Token._getNextTokenId(): Using memory instead of storage variable
+
+From:
+
+    while (tokenRecipient[_tokenId].wallet != address(0)) ++_tokenId;
+
+Becomes:
+
+    Founder recipient = tokenRecipient[_tokenId];
+    while (recipient.wallet != address(0)) ++_tokenId;
+
+# 9. [G-9] Token._isForFounder(): Using memory instead of storage variable
+
+Add line:
+
+    Founder memory recipient = tokenRecipient[baseTokenId];
+
+Update:
+
+    tokenRecipient[baseTokenId].wallet => recipient.wallet;
+    tokenRecipient[baseTokenId].vestExpiry => recipient.vestExpiry;
+
+# 10. [G-10] Token.getFounder(): Return memory instead of storage variable
+
+From:
+
+    return founder[_founderId];
+
+Becomes:
+
+    Founder  memory _founder = founder[_founderId];
+    return _founder;
