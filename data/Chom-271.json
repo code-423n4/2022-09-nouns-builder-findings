@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Chom",
+  "address": "0xc4c459668fb29833d7dee997d7d347e2634c9cef",
+  "risk": "2",
+  "title": "Founder is initialized as a vetoer. Founder and vetoer should be a different person.",
+  "issueId": 271,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/271"
+}
