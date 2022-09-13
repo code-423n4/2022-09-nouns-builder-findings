@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "elad",
+  "address": "0xffaf62026731607c5087a44bba2cbce1fc908d99",
+  "risk": "2",
+  "title": "A proposer's proposal can be cancelled when they have exactly proposalThreshold votes, despite being able to propose with the same number of votes",
+  "issueId": 282,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/282"
+}
