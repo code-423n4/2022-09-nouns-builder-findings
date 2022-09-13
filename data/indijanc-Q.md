@@ -1,5 +1,5 @@
 ## Overall impression
-The project looks well written and structured in terms of code and design. It's leveraging OpenZeppelin and of course NounsDAO, but the the rest of the project also looks well thought through and with security in mind.
+The project looks well written and structured in terms of code and design. It's leveraging OpenZeppelin and of course NounsDAO, but the rest of the project also looks well thought through and with security in mind. I really liked the fact that the team deployed and offered to try the project out on a testnet.
 
 ## Received functions should be external
 [Treasury.sol L242](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L242)
