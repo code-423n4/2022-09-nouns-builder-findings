@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "elad",
+  "address": "0xffaf62026731607c5087a44bba2cbce1fc908d99",
+  "risk": "2",
+  "title": "Adding more than 65535 items per property results in those higher ID items never being used",
+  "issueId": 286,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/286"
+}
