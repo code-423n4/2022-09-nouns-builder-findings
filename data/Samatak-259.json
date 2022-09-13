@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Samatak",
+  "address": "0x573e5df640efd101d722a2a4424755ce59573435",
+  "risk": "2",
+  "title": "## **[USE `SAFETRANSFER()`/`SAFETRANSFERFROM()` INSTEAD OF `TRANSFER()`/`TRANSFERFROM()`]:**",
+  "issueId": 259,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/259"
+}
