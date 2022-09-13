@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "MEP",
+  "address": "0x999a700e94f9b6bbc464d59f879234a05dea89c3",
+  "risk": "3",
+  "title": "H1 - Delegating a token after a mint does not decrements the voting power of the delegator",
+  "issueId": 267,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/267"
+}
