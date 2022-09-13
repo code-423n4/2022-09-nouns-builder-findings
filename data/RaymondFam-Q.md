@@ -31,3 +31,17 @@ https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auctio
         settings.timeBuffer = 5 minutes;
         settings.minBidIncrement = 10;
 ```
+## Modifier for Repeated Use of the Identical if-revert
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L212
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L224
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L280
+
+Consider implementing a modifier in the contract to replace the above identical code lines:
+
+```
+modifier onlyTreasury() {
+        if (msg.sender != address(this)) revert ONLY_TREASURY();
+        _;
+    }
+```
+  
