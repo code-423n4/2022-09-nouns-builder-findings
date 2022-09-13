@@ -1,0 +1,1 @@
+- In `Manager.sol` L116-117, revert condition does not correspond to the comment and to the error name. Indeed, it reverts with the error name `FOUNDER_REQUIRED` only if the first founder has the null address. If there is no founder provided, it will revert (because we try to access `_founderParams[0]`) but without revert message designed for. 
