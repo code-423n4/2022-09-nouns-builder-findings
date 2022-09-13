@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "jonatascm",
+  "address": "0xdb322cc0d1a46b0a27e1541c81004065bba22977",
+  "risk": "2",
+  "title": "WrappedEth could be stuck forever",
+  "issueId": 272,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/272"
+}
