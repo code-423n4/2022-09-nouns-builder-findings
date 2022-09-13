@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "bulej93",
+  "address": "0x3f07b81ee684953e09f72bcb931adfcf223309e0",
+  "risk": "3",
+  "title": "getPastVotes function doesnt exist ",
+  "issueId": 252,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/252"
+}
