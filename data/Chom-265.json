@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Chom",
+  "address": "0xc4c459668fb29833d7dee997d7d347e2634c9cef",
+  "risk": "3",
+  "title": "Governor ownership is the treasury which doesn't expose any methods to set the settings parameters. So, it can't be set after initialization.",
+  "issueId": 265,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/265"
+}
