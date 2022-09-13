@@ -12,6 +12,12 @@ The code at the link reads the storage var instead of the var cached at the line
 +        if (_auction.settled) revert AUCTION_SETTLED();
 ```
 
+## Use off-chain calculation + on-chain verification instead of on-chain binary search
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/lib/token/ERC721Votes.sol#L93
+
+This one requires a bit of a change to the ABI and require the users to pre-calculate a parameter, but can save a significant amount of gas (a few thousands, depending on the length of `accountCheckpoints`).
+
+Instead of using an on-chain binary search, you can calculate the right checkpoint index off-chain and send it as a parameter to the function (which will verify on-chain this is the right point), this can save a nice amount of gas since verifying will cost only 2 `sload`s (each `sload` can cost up to 2.1K gas units) instead of log2(accountCheckpoints.length).
 
 
 ## Caching `block.timestamp` costs more gas
