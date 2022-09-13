@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "indijanc",
+  "address": "0x85d903bbc355fc763dfb6a358088bc14862ef633",
+  "risk": "3",
+  "title": "`burn()` doesn't update `totalSupply`",
+  "issueId": 275,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/275"
+}
