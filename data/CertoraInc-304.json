@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "CertoraInc",
+  "address": "0x09A9af114843218a7446929b1183eBec373B2827",
+  "risk": "3",
+  "title": "Wrong placement of parenthesis leads to wrong assignment of base tokens",
+  "issueId": 304,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/304"
+}
