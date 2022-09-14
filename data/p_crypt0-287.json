@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "p_crypt0",
+  "address": "0x1928785e5582d2866b293c96ca8bf0f7a19a1178",
+  "risk": "2",
+  "title": "[Medium] Attacker can steal votes from all wallets that have signed transaction with _deadlines pending. ",
+  "issueId": 287,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/287"
+}
