@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Chom",
+  "address": "0xc4c459668fb29833d7dee997d7d347e2634c9cef",
+  "risk": "2",
+  "title": "Precision is not enough for proposalThreshold and quorum. Collections with at least 20000 NFTs in total supply may have some trouble.",
+  "issueId": 335,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/335"
+}
