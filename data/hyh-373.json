@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "hyh",
+  "address": "0x8efE50a4b8c8B64FDC93a5b1712Fd735d8223cD5",
+  "risk": "3",
+  "title": "ERC721Votes's delegation disables NFT transfers and burning",
+  "issueId": 373,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/373"
+}
