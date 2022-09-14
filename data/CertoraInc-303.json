@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "CertoraInc",
+  "address": "0x09A9af114843218a7446929b1183eBec373B2827",
+  "risk": "3",
+  "title": "Truncation in casting can lead to a founder receiving all the base tokens",
+  "issueId": 303,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/303"
+}
