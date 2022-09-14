@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "zzzitron",
+  "address": "0xe30880fedbdc6e8b0c7ddd175c50cbb2fb55ee25",
+  "risk": "3",
+  "title": "`Token:_addFounders`: unsafe cast of `ownershipPct` allows founder to get a lot of tokens",
+  "issueId": 344,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/344"
+}
