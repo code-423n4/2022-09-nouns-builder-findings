@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "CertoraInc",
+  "address": "0x09A9af114843218a7446929b1183eBec373B2827",
+  "risk": "2",
+  "title": "An attacker can increase the gas cost of the `createBid` function",
+  "issueId": 308,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/308"
+}
