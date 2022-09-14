@@ -1,5 +1,9 @@
 # `baseTokenId` in `Token.sol` can be updated in efficient way
-Updating base baseTokenId costs more gas. `a = a+b` costs less gas compared to `a += b`. Check audit tag below.
+Updating base baseTokenId costs more gas. `a = a+b` costs less gas compared to `a += b`.
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/token/Token.sol#L118
+
+Check audit tag below.
 
 ````solidity
  function _addFounders(IManager.FounderParams[] calldata _founders) internal {
@@ -59,3 +63,64 @@ Updating base baseTokenId costs more gas. `a = a+b` costs less gas compared to `
         }
     }
 ````
+
+# `proposal.againstVotes`, `proposal.forVotes` and `proposal.abstainVotes` in `Governor.sol` can be updated in optimized way
+
+ `a = a+b` costs less gas compared to `a += b`.
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L280
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L285
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/governance/governor/Governor.sol#L290
+
+Check @audit tag below in code.
+
+```` solidity
+ function _castVote(
+        bytes32 _proposalId,
+        address _voter,
+        uint256 _support,
+        string memory _reason
+    ) internal returns (uint256) {
+        // Ensure voting is active
+        if (state(_proposalId) != ProposalState.Active) revert VOTING_NOT_STARTED();
+
+        // Ensure the voter hasn't already voted
+        if (hasVoted[_proposalId][_voter]) revert ALREADY_VOTED();
+
+        // Ensure the vote is valid
+        if (_support > 2) revert INVALID_VOTE();
+
+        // Record the voter as having voted
+        hasVoted[_proposalId][_voter] = true;
+
+        // Get the pointer to the proposal
+        Proposal storage proposal = proposals[_proposalId];
+
+        // Used to store the voter's weight
+        uint256 weight;
+
+        // Cannot realistically underflow and `getVotes` would revert
+        unchecked {
+            // Get the voter's weight at the time the proposal was created
+            weight = getVotes(_voter, proposal.timeCreated);
+
+            // If the vote is against:
+            if (_support == 0) {
+                // Update the total number of votes against
+                proposal.againstVotes += uint32(weight); //@audit gas: should be proposal.againstVotes= proposal.againstVotes+ uint32(weight);
+
+                // Else if the vote is for:
+            } else if (_support == 1) {
+                // Update the total number of votes for
+                proposal.forVotes += uint32(weight);//@audit gas: should be proposal.forVotes = proposal.forVotes+ uint32(weight);
+
+                // Else if the vote is to abstain:
+            } else if (_support == 2) {
+                // Update the total number of votes abstaining
+                proposal.abstainVotes += uint32(weight); //@audit gas:  should be proposal.abstainVotes = proposal.abstainVotes + uint32(weight)
+            }
+        }
+````
+
