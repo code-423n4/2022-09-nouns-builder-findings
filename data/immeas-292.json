@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "immeas",
+  "address": "0x89a6da332b75152a8a98aa4869d2dbe3d00d3ff9",
+  "risk": "2",
+  "title": "assets sent to Treasury implementation contract will be lost",
+  "issueId": 292,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/292"
+}
