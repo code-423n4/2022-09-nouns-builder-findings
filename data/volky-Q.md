@@ -14,3 +14,7 @@ That is, use a `>=` comparison instead of `>`
 The [name and return type of the function](https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/Token.sol#L177) makes it look like it is read-only and has no side effects on the contract, while it actually [mints tokens](https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/Token.sol#L188).
 
 I suggest changing it to `_performScheduledMint` to be consistent with the terminology used on other parts of the contract
+
+# Unused ITreasury error EXECUTION_EXPIRED
+
+The [EXECUTION_EXPIRED error](https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/governance/treasury/ITreasury.sol#L49) was declared but never used
