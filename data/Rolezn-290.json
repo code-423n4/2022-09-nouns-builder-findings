@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Rolezn",
+  "address": "0xf6850e8f677d320159bb8c84f40dd136d03a2ebb",
+  "risk": "2",
+  "title": "Manager deployment will always fail if the first founder wallet is missing in _founderParams",
+  "issueId": 290,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/290"
+}
