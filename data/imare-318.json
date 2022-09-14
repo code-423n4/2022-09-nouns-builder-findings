@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "imare",
+  "address": "0x6584dbfb545cc95633bfe906dfce28b2d65581ee",
+  "risk": "2",
+  "title": "Missing attributes will prevent query of minted tokens as TOKEN_NOT_MINTED",
+  "issueId": 318,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/318"
+}
