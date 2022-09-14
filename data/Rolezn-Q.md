@@ -11,7 +11,33 @@ It would be safer to use the upgradeable versions of the library contracts to av
 Where applicable, use the contracts from @openzeppelin/contracts-upgradeable instead of @openzeppelin/contracts.
 
 
-## (2) Missing WhenNotPaused modifier 
+## (2) Unable to change founder wallet address
+
+Severity: Low
+
+In Token.sol once founders have been added it is no longer possible to change the founders addresses.
+Should there be a case where a founder wishes to change his wallet address, it wouldn't be possible as there is no option to update his wallet address.
+
+## Recommended Mitigation Steps
+
+Add an option for the specific founder to change his wallet address.
+
+
+## (3) The comment '// Ensure at least one founder is provided' in Manager.sol is wrong
+
+Severity: Low
+
+The comment mentions that it ensures there's at least one founder is provided. However, the following requirement only checksfor the first existence of the first founder's wallet address and not the rest of the founders provided in _foundersParams.
+
+	if ((founder = _founderParams[0].wallet) == address(0)) revert FOUNDER_REQUIRED();
+	
+## Proof of Concept
+
+	// Ensure at least one founder is provided
+	if ((founder = _founderParams[0].wallet) == address(0)) revert FOUNDER_REQUIRED();
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/manager/Manager.sol#L116-L117
+
+## (4) Missing WhenNotPaused modifier 
 
 Severity: Low
 
@@ -28,7 +54,7 @@ https://github.com/code-423n4/2022-09-nouns-builder/tree/main/src/auction/Auctio
 Added the whenNotPaused modifier for createBid
 
 
-## (3) Use _safeMint instead of _mint
+## (5) Use _safeMint instead of _mint
 
 Severity: Low
 
@@ -51,7 +77,7 @@ Use _safeMint whenever possible instead of _mint
 
 
 
-## (4) Missing Checks for Address(0x0) 
+## (6) Missing Checks for Address(0x0) 
 
 Severity: Low
 
@@ -96,7 +122,7 @@ Consider adding zero-address checks in the mentioned codebase.
 
 
 
-## (5) Use Safetransfer Instead Of Transfer 
+## (7) Use Safetransfer Instead Of Transfer 
 
 Severity: Low
 
@@ -117,7 +143,7 @@ Consider using safeTransfer/safeTransferFrom or require() consistently.
 
 
 
-## (6) Transferownership Should Be Two Step
+## (8) Transferownership Should Be Two Step
 
 Severity: Low
 
@@ -140,7 +166,7 @@ Lack of two-step procedure for critical operations leaves them error-prone. Cons
 
 
 
-## (7) Unused Receive() Function Will Lock Ether In Contract 
+## (9) Unused Receive() Function Will Lock Ether In Contract 
 
 Severity: Low
 
@@ -160,7 +186,7 @@ The function should call another function, otherwise it should revert
 
 
 
-## (8) Event Is Missing Indexed Fields
+## (10) Event Is Missing Indexed Fields
 
 Severity: Non-Critical
 
@@ -251,7 +277,7 @@ https://github.com/code-423n4/2022-09-nouns-builder/tree/main/src/token/metadata
 https://github.com/code-423n4/2022-09-nouns-builder/tree/main/src/token/metadata/interfaces/IPropertyIPFSMetadataRenderer.sol#L28
 
 
-## (9) Use a more recent version of Solidity
+## (11) Use a more recent version of Solidity
 
 Severity: Non-Critical
 
@@ -284,7 +310,7 @@ Consider updating to a more recent solidity version.
 
 
 
-## (10) Adding A Return Statement When The Function Defines A Named Return Variable, Is Redundant
+## (12) Adding A Return Statement When The Function Defines A Named Return Variable, Is Redundant
 
 Severity: Non-Critical
 
@@ -306,7 +332,7 @@ https://github.com/code-423n4/2022-09-nouns-builder/tree/main/src/token/metadata
 
 
 
-## (11) Use of Block.Timestamp
+## (13) Use of Block.Timestamp
 
 Severity: Non-Critical
 
