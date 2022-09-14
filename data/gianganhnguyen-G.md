@@ -167,3 +167,5 @@ Becomes:
        }
     }
     emit AuctionBid(_tokenId, msg.sender, msg.value, extend, endTime);
+
+# 13. [G-13] Treasury.execute(), line 162: Initialize uint256 i; is cheaper than uint256 i= 0;
