@@ -22,7 +22,7 @@
 | [G-19] |It is more efficient to use `abi.encodePacked` instead of `abi.encode`  |164 |3 |
 | [G-20] |Statements should be checked first, this is a gas-optimized structure | |1 |
 
-Total 20 isues
+Total 20 issues
 
 ### Suggestions
 | Number | Suggestion Details |Context |
