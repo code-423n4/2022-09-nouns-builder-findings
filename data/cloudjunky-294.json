@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "cloudjunky",
+  "address": "0x429882f4ee6efef049ac273bf2abf89e6cb906b6",
+  "risk": "2",
+  "title": "Use safeTransferFrom rather than transferFrom for ERC721 tokens",
+  "issueId": 294,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/294"
+}
