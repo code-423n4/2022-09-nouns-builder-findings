@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "PPrieditis",
+  "address": "0x855eab463c41f6ba5de353c462878d930d7895ea",
+  "risk": "2",
+  "title": "Anyone can front run initialize() and deploy() in Manager.sol",
+  "issueId": 325,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/325"
+}
