@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "zzzitron",
+  "address": "0xe30880fedbdc6e8b0c7ddd175c50cbb2fb55ee25",
+  "risk": "2",
+  "title": "`Auction:createBid`: can take a bid with the same `highestBid` if (highestBid * minBidIncrement < 100)",
+  "issueId": 349,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/349"
+}
