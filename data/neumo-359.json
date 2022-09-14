@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "neumo",
+  "address": "0x52156528d5029d09fe82bf44c7bd6de91eee5774",
+  "risk": "2",
+  "title": "No control over timeBuffer could make that the first bid of each auction would make the auction end",
+  "issueId": 359,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/359"
+}
