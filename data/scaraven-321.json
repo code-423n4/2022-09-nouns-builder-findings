@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "scaraven",
+  "address": "0xac3a826c8ea76ab6fce817d3e54da0acb5fd30d5",
+  "risk": "3",
+  "title": "Incorrect delegation of tokens in `_afterTokenTransfer` allows users to gain maximum voting weight",
+  "issueId": 321,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/321"
+}
