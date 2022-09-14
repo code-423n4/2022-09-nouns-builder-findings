@@ -19,6 +19,9 @@ This one requires a bit of a change to the ABI and require the users to pre-calc
 
 Instead of using an on-chain binary search, you can calculate the right checkpoint index off-chain and send it as a parameter to the function (which will verify on-chain this is the right point), this can save a nice amount of gas since verifying will cost only 2 `sload`s (each `sload` can cost up to 2.1K gas units) instead of log2(accountCheckpoints.length).
 
+An example of using this kind of pattern can be found here:
+https://github.com/PartyDAO/party-contracts-c4/blob/3896577b8f0fa16cba129dc2867aba786b730c1b/contracts/party/PartyGovernance.sol#L848-L877
+
 
 ## Caching `block.timestamp` costs more gas
 https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/auction/Auction.sol#L211
