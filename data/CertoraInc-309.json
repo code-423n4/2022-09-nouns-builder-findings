@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "CertoraInc",
+  "address": "0x09A9af114843218a7446929b1183eBec373B2827",
+  "risk": "2",
+  "title": "The quorum value that is assigned to the proposal is not accurate",
+  "issueId": 309,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/309"
+}
