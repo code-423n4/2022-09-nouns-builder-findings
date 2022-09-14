@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "0xSmartContract",
+  "address": "0x1c9eadb67e158ac831c3922ea17e370a99bcc8f4",
+  "risk": "3",
+  "title": "With lower  ```createBid```  offer, it is possible to prevent higher  ```createBid```",
+  "issueId": 365,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/365"
+}
