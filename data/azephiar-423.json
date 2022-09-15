@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "azephiar",
+  "address": "0xaa398440c592a7d22d7a343dc2e7d303325b35ba",
+  "risk": "3",
+  "title": "The quorum votes calculations don't take into account burned tokens",
+  "issueId": 423,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/423"
+}
