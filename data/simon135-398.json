@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "simon135",
+  "address": "0x7bfbabda21beebb17e284901bfc41e942f8128c8",
+  "risk": "2",
+  "title": "someone can frontrun the proposol for free and cause users tx to revert when users are trying to make proposals ",
+  "issueId": 398,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/398"
+}
