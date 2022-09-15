@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "MiloTruck",
+  "address": "0x9834b17a29652e317202109c2e624fe0a32a1383",
+  "risk": "2",
+  "title": "Missing upper limit definition in setReservePrice() of Auction.sol",
+  "issueId": 500,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/500"
+}
