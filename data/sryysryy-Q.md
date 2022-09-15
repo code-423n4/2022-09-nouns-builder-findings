@@ -1,16 +1,3 @@
-### MULTIPLE `ADDRESS` MAPPINGS CAN BE COMBINED INTO A SINGLE `MAPPING` OF AN `ADDRESS` TO A `STRUCT`, WHERE APPROPRIATE
-
-_There is 1 instance of this issue:
-
-```solidity
-// lib/token/ERC721Votes.sol
-29:    mapping(address => address) internal delegation;
-```
-https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/token/ERC721Votes.sol#L29
-
-&nbsp;
-&nbsp;
-
 
 ### UNUSED/EMPTY `RECEIVE()`/`FALLBACK()` FUNCTION
 
