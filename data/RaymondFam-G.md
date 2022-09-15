@@ -30,16 +30,25 @@ Before deploying your contract, activate the optimizer when compiling using “s
 
 https://docs.soliditylang.org/en/v0.5.4/using-the-compiler.html#using-the-commandline-compiler
 
-## Avoid Using += to Save Gas
+## Avoid Using += or i++ to Save Gas
 Here are some of the instances entailed:
 
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L280
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L285
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L290
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L91
 
-On line 280, for instance, it could have been refactored as follows to save some gas:
+On line 280 pertaining to `Governor.sol`, for instance, it could have been refactored as follows to save some gas:
 
+```
 proposal.againstVotes = proposal.againstVotes + uint32(weight);
+```
+
+And, line 91 associated with `Token.sol` could have been rewritten as:
+
+```
+uint256 founderId = ++settings.numFounders;
+```
 
 ## Cache Storage Values in Memory
 
