@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rotcivegaf",
+  "address": "0xba910716fd4b6b4447aea613993898eeb63844ad",
+  "risk": "3",
+  "title": "Overflow on `_moveDelegateVotes` function",
+  "issueId": 412,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/412"
+}
