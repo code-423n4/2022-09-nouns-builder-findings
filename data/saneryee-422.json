@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "saneryee",
+  "address": "0x8165636930a7020f4106c9a153463626a4d9bda2",
+  "risk": "3",
+  "title": "The contract can transfer Ownership to the zero address.",
+  "issueId": 422,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/422"
+}
