@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "kevin",
+  "address": "0x4986c1f2c8a2f71c84825be29c622a3071be47a2",
+  "risk": "2",
+  "title": "should guarded with  onlyOwner",
+  "issueId": 524,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/524"
+}
