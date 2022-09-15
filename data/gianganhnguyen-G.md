@@ -169,3 +169,11 @@ Becomes:
     emit AuctionBid(_tokenId, msg.sender, msg.value, extend, endTime);
 
 # 13. [G-13] Treasury.execute(), line 162: Initialize uint256 i; is cheaper than uint256 i= 0;
+
+# 14. [G-14]  <x> += y cost more gas than <x> = <x> + <y>
+
+##### Instances include:
+
+File Governor.sol, line 280, 285, 290
+File Token.sol, line 88, 118
+File MetadataRenderer.sol, line 140
