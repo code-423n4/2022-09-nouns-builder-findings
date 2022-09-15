@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "dipp",
+  "address": "0x675454ae78d25632fc26763fa9cb72a99cb0a36e",
+  "risk": "2",
+  "title": "Rounding error in ```proposalThreshold``` and ```quorum``` could lead to arbitrary proposals being created and executed",
+  "issueId": 501,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/501"
+}
