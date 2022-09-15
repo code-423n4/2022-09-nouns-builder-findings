@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rbserver",
+  "address": "0x4bd9605a3e546f3400df2c2be7b1c775aeea56bd",
+  "risk": "3",
+  "title": "State function does not require majority of votes for supporting and passing a proposal",
+  "issueId": 626,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/626"
+}
