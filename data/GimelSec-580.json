@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "GimelSec",
+  "address": "0x8595B7e8F4d3287248DB45AcA4Ba4EaCFe4Ab78e",
+  "risk": "2",
+  "title": "An evil bidder can extend an auction in `Auction.createBid` for a very long time",
+  "issueId": 580,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/580"
+}
