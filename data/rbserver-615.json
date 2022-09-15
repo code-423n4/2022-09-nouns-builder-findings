@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rbserver",
+  "address": "0x4bd9605a3e546f3400df2c2be7b1c775aeea56bd",
+  "risk": "2",
+  "title": "Different time buffers can be compared against for same auction",
+  "issueId": 615,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/615"
+}
