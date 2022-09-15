@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "scaraven",
+  "address": "0xac3a826c8ea76ab6fce817d3e54da0acb5fd30d5",
+  "risk": "2",
+  "title": "Changing treasury owner through `transferOwnership()` can break `Governer.sol` and `Auction.sol`",
+  "issueId": 468,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/468"
+}
