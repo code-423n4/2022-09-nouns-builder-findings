@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ElKu",
+  "address": "0x819681641e07e80f817a34f82400debcc2579b98",
+  "risk": "2",
+  "title": "Unintended zero wallet addresses results in loss of tokens for Founders",
+  "issueId": 410,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/410"
+}
