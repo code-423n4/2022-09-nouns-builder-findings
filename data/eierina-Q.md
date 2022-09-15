@@ -15,3 +15,7 @@ When a bidder started with a 0 ETH bid, then the next bidder can win the bid wit
 n/a
 
 ## Recommended Mitigation Steps
+
+A possible solution would be to
+change from: [if (msg.value < minBid) revert MINIMUM_BID_NOT_MET();](https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/auction/Auction.sol#L123)
+to: if (msg.value < minBid || minBid == highestBid) revert MINIMUM_BID_NOT_MET();
