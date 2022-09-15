@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "wagmi",
+  "address": "0xB768c53CB0E6E38716C8340c104335ffDB64B59A",
+  "risk": "3",
+  "title": "Founders may receive less token supply than their ownership percentage in case they are granted to `baseTokenId >= 100`",
+  "issueId": 514,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/514"
+}
