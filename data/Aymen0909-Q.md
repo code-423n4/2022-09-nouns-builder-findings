@@ -67,12 +67,12 @@ Instances include:
 
 File: src/lib/utils/Ownable.sol
 
-[function transferOwnership(address _newOwner) public onlyOwner](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/utils/Ownable.sol#L63)
+[function transferOwnership(address _newOwner) public onlyOwner](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/utils/Ownable.sol#L63-L67)
 
-[function safeTransferOwnership(address _newOwner) public onlyOwner](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/utils/Ownable.sol#L71)
+[function safeTransferOwnership(address _newOwner) public onlyOwner](https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/lib/utils/Ownable.sol#L71-L75)
 
 #### Mitigation
-Add non-zero address checks on the _newOwner address in the `transferOwnership` and `safeTransferOwnership` functions as it is implemented in the OpenZeppelin Ownable contract.
+Add non-zero address checks on the _newOwner address in the `transferOwnership` and `safeTransferOwnership` functions as it is implemented in the [Openzeppelin Ownable contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol#L69-L82)
 
 ### 3- Setters should check the input value and revert if it's the zero address or zero :
 
