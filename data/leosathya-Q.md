@@ -22,6 +22,8 @@ There is 10 instance of this issue:
 
 #### **Mitigation**
 
+check for zero address
+
 
 ## [L-02] ADDRESSES LACK ZERO-ADDRESS CHECK BEFORE ASSIGNING THEM TO STATE VARIABLE
 
@@ -41,6 +43,9 @@ There is 2 instance of this issue:
 
 #### **Mitigation**
 
+check for zero address
+
+
 
 ## [L-03] _addFounders() IN Token.sol MAY LEAD TO DoS(block gas limit exceed) CONDITION
 
@@ -54,6 +59,12 @@ There is 1 instance of this issue:
 > https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L71-L125
 
 
+#### **Mitigation**
+
+. Use Small size array as Input
+. Make a Boundary for input array length
+
+
 ## [L-04] _SAFEMINT() SHOULD BE USED RATHER THAN _MINT() WHEREVER POSSIBLE
 
 _mint() is discouraged in favor of _safeMint() which ensures that the recipient is either an EOA or implements IERC721Receiver. Both OpenZeppelin and solmate have versions of this function
@@ -64,6 +75,8 @@ There is 1 instance of this issue:
 > https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L161
 
 #### **Mitigation**
+
+Use SafeMint function.
 
 
 ## [L-05] _authorizeUpgrade() OF Manager.sol SHOULD DO SOMETHING, ATLEAST EMIT SOME EVENTS WHEN NEW IMPLEMENTED ADDRESS CHANGE
@@ -78,6 +91,7 @@ At least it should emit a events when Implemented address changes
 
 
 ## [L-06] execute() FROM Treasury.sol DOESN'T CHECK FOR DYNAMIC INPUT ARRAY LENGTH
+
 3 dynamic array are take as input parameter and then used in a For loop,
 There is no code syntax for checking 3 arrays are of same length or not. As a Human error Owner can copy paste array of different length that ultimately 
 result in function fail.
@@ -86,6 +100,9 @@ result in function fail.
 > https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/treasury/Treasury.sol#L141-L172
 
 #### **Mitigation**
+
+Should have condition to check that all arrays have same length.
+
 
 ## [L-07] CONSIDER ADDINGS CHECKS FOR SIGNATURE MALLEABILITY
 
@@ -99,7 +116,7 @@ There is 1 instance of this issue:
 
 ## [L-08] LACK OF UINT VARIIABLE CHECK
 
-uint check absent for _reservePrice, during initialization in Auction contract 
+uint check absent for _reservePrice, during initialization in Auction contract, which can be set to 0 at the time of initialization 
 
 
 > **File : Auction.sol**
@@ -118,18 +135,35 @@ setDuration(), setReservePrice(), setTimeBuffer(), setMinimumBidIncrement()
 > https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L323-L327
 > https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L331-L335
 
+#### **Mitigation**
 
+There should be some governace system with a Timelock feature, that gives Audience to make their decisions
 
 ## [L-09] OWNER CAN INCREMENT BIDDING PRICE ANYTIME 
 
 No check presents for input parameter percentage in function setMinimumBidIncrement(), that could be Any orbitary amount.
+This could lead to a Front-Running case,
 
 > **File : Auction.sol**
 > https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L331-L335
 
+#### **Mitigation**
+
+There should be a Timelock feature for changing critical feature like this, that gives Audience to make their decisions
+
 
 ## [L-10] NO CHECK FOR RETURN VALUE OF IWETH TRANSFER
 
+Their is no check for return value of IWETH.transfer that could lead to the Eth loss for bidder in Auction contract.
+
+> **File : Auction.sol**
+> https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L363
+
+
+#### **Mitigation**
+
+There should be a return value check present for IWETH.transfer
+More important here Contract using Pushing instaed of Pulling which can lead to DoS if attacker intend to so, and he will lose his fund 
 
 
  
