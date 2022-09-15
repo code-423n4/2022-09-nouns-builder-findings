@@ -41,4 +41,8 @@ On line 280, for instance, it could have been refactored as follows to save some
 
 proposal.againstVotes = proposal.againstVotes + uint32(weight);
 
+## Cache Storage Values in Memory
 
+Anytime you are reading from storage more than once, it is cheaper to cache variables in memory. An SLOAD cost 100 GAS while MLOAD and MSTORE only cost 3 GAS. For instance, the following instance of struct could be cached as local variable prior to updating all respective values:
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L77-L81
