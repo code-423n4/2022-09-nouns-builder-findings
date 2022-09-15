@@ -430,7 +430,7 @@ File: /src/lib/token/ERC721Votes.sol
 
 **Proof: can be tested on remix also, showing results for foundry** 
 ```solidity
-pragma solidity ^0.8.6;
+pragma solidity 0.8.15;
 contract Constant{
     bytes32 constant noteDenom = keccak256(bytes("NOTE"));
     function doConstant() external view returns(bytes32){
