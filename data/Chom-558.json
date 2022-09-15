@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Chom",
+  "address": "0xc4c459668fb29833d7dee997d7d347e2634c9cef",
+  "risk": "3",
+  "title": "ERC721Votes: delegateBySig allows the user to vote to address 0, which causes the user to permanently lose his voting power. ",
+  "issueId": 558,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/558"
+}
