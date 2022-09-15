@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rbserver",
+  "address": "0x4bd9605a3e546f3400df2c2be7b1c775aeea56bd",
+  "risk": "2",
+  "title": "Compromised or malicious vetoer can veto any proposals with unrestricted power",
+  "issueId": 622,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/622"
+}
