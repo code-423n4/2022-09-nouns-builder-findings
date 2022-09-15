@@ -525,3 +525,31 @@ Up to three `indexed` can be used per event and should be added.
 `2022-09-nouns-builder/test/utils/mocks/WETH.sol#L13` [event Deposit(address indexed dst, uint256 wad);](https://github.com/code-423n4/2022-09-nouns-builder/test/utils/mocks/WETH.sol#L13)
 
 `2022-09-nouns-builder/test/utils/mocks/WETH.sol#L14` [event Withdrawal(address indexed src, uint256 wad);](https://github.com/code-423n4/2022-09-nouns-builder/test/utils/mocks/WETH.sol#L14)
+
+## ✅ G-14: Do not call the same function within one function
+
+### 📝 Description
+Do not call the same function within one function.
+
+### 💡 Recommendation
+Use `currentProposalThreshold` variable instead of executing proposalTheshold() again
+
+### 🔍 Findings:
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L116-L128
+``` solidity
+    function propose(
+        address[] memory _targets,
+        uint256[] memory _values,
+        bytes[] memory _calldatas,
+        string memory _description
+    ) external returns (bytes32) {
+        // Get the current proposal threshold
+        uint256 currentProposalThreshold = proposalThreshold();
+
+        // Cannot realistically underflow and `getVotes` would revert
+        unchecked {
+            // Ensure the caller's voting weight is greater than or equal to the threshold
+            // Use currentProposalThreshold instead of executing proposalTheshold() again
+            if (getVotes(msg.sender, block.timestamp - 1) < proposalThreshold()) revert BELOW_PROPOSAL_THRESHOLD();
+        }
+```
