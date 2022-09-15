@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "unforgiven",
+  "address": "0x6e6c53f81e310d53387dc2166ee9a632cf768fa1",
+  "risk": "2",
+  "title": "possible token burns in burn() function in Token contract because the function burn any token not just tokens that the owner is the auction",
+  "issueId": 591,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/591"
+}
