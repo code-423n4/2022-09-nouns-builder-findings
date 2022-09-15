@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "izhuer",
+  "address": "0xe03a2766325d914898cda00d4ef927a305786aa7",
+  "risk": "2",
+  "title": "`_generateSeed` is predictable or prone to the miner's manipulation ",
+  "issueId": 590,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/590"
+}
