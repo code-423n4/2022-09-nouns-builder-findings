@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Jeiwan",
+  "address": "0xaf8dde65b84ae5d77e4f9a18cdc854e324a41b04",
+  "risk": "2",
+  "title": "Minting is not possible when the number of properties is greater than 15",
+  "issueId": 457,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/457"
+}
