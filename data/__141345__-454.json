@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "__141345__",
+  "address": "0xcba430d52c773bd376fed4edbf46b2b045141345",
+  "risk": "2",
+  "title": "Unbounded proposal `_targets` array length could cause DoS",
+  "issueId": 454,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/454"
+}
