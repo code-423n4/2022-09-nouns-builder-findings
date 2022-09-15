@@ -37,6 +37,7 @@ https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/gov
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L285
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/governance/governor/Governor.sol#L290
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L91
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L154
 
 On line 280 pertaining to `Governor.sol`, for instance, it could have been refactored as follows to save some gas:
 
