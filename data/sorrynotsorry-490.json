@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "sorrynotsorry",
+  "address": "0x6262f720679c04cc7f2a14c0c03486d0287c4853",
+  "risk": "2",
+  "title": "Auction can't be settled in paused condition until the `auction.endTime` is reached",
+  "issueId": 490,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/490"
+}
