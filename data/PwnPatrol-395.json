@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "PwnPatrol",
+  "address": "0x92100Ef14c79DebbaB331AFb994FA18AC6F2E82D",
+  "risk": "3",
+  "title": "User can generate unlimited votes through faulty transfer logic",
+  "issueId": 395,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/395"
+}
