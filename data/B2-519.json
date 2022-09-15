@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "B2",
+  "address": "0x3549e4a34b9cccb963767c6a455bd5e37bfe270c",
+  "risk": "2",
+  "title": "Use safetransferfrom for ERC721 tokens",
+  "issueId": 519,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/519"
+}
