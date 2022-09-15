@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Waze",
+  "address": "0xb649642dee8e9e25b21cfc67da7dcf86828dd60d",
+  "risk": "2",
+  "title": "Use safetransfer/safetransferFrom instead of transfer/transferFrom ",
+  "issueId": 492,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/492"
+}
