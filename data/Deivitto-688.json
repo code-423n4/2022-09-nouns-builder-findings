@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Deivitto",
+  "address": "0xa322bD417154D04d5704952E550288f0f91044Bd",
+  "risk": "3",
+  "title": "# `MetadataRenderer` `onMinted()` function use of weak prng for token properties can be exploited for profitable NFTs",
+  "issueId": 688,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/688"
+}
