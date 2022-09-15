@@ -18,3 +18,14 @@ I suggest changing it to `_performScheduledMint` to be consistent with the termi
 # Unused ITreasury error EXECUTION_EXPIRED
 
 The [EXECUTION_EXPIRED error](https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/governance/treasury/ITreasury.sol#L49) was declared but never used
+
+# use string.concat for concatenation on MetadataRenderer
+
+use [string.concat](https://docs.soliditylang.org/en/v0.8.15/types.html#string-concat) instead of abi.encodePacked where simple string concatenation is needed for better readability:
+
+- https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/metadata/MetadataRenderer.sol#L208-L213
+- https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/metadata/MetadataRenderer.sol#L243-L244
+- https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/metadata/MetadataRenderer.sol#L258-L260
+- https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/metadata/MetadataRenderer.sol#L272-L280
+- https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/metadata/MetadataRenderer.sol#L290-L303
+- https://github.com/code-423n4/2022-09-nouns-builder/blob/debe9b792cc70510eadf9b3728cde5b0f2ec9a1f/src/token/metadata/MetadataRenderer.sol#L309
