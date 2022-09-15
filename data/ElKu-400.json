@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ElKu",
+  "address": "0x819681641e07e80f817a34f82400debcc2579b98",
+  "risk": "3",
+  "title": "When totalOwnership of the founders is 100, the whole system will fail to mint any tokens and would need redeployment with fresh settings",
+  "issueId": 400,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/400"
+}
