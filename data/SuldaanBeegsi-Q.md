@@ -24,7 +24,7 @@ metadata = address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), addr
         governor = address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), address(this), salt, governorHash)))));
     }
 
-The use of encodePacked you are able to shorten the hash and use less data. But at
+With the use of abi.encodePacked the dev is able to shorten the hash and use less data. But at
 the price of risking a hash collision. I see that the developers have taken measure to avoid
 know vulnerability, but  given that we have to have the view point
 of longevity in coding a smart contract template. The use of abi.enconde will be a
