@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Diana",
+  "address": "0x8846d12351b96363b87ad0a8712aaf99bd61e0df",
+  "risk": "2",
+  "title": "USING TRANSFERFROM FUNCTION OF AN ERC721 CONTRACT MAY FREEZE THE USER'S TOKENS",
+  "issueId": 503,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/503"
+}
