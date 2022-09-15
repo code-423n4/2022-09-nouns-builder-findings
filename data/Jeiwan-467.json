@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Jeiwan",
+  "address": "0xaf8dde65b84ae5d77e4f9a18cdc854e324a41b04",
+  "risk": "2",
+  "title": "Auction round manipulation caused by weak `minBidIncrement` validation",
+  "issueId": 467,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/467"
+}
