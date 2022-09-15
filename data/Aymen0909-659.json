@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Aymen0909",
+  "address": "0xbea9a04e1b82a3f6ad01ea8f5b43622f95f3f353",
+  "risk": "2",
+  "title": "Ownership of `Manager.sol` contract could be stolen after deployment",
+  "issueId": 659,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/659"
+}
