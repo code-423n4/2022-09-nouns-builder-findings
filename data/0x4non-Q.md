@@ -39,6 +39,15 @@ index d1025ec..86a94e5 100644
 
 ---
 
+Unsafe downcasting to `_newTotalVotes` on `_writeCheckpoint` method
+[ERC721Votes.sol#L252](https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/lib/token/ERC721Votes.sol#L252)
+
+If `_newTotalVotes` are greater than `type(uint192).max` they will be downcast to `type(uint192).max`
+
+
+
+---
+
 
 The function `registerUpgrade(address _baseImpl, address _upgradeImpl)` should check that `_upgradeImpl` is a contract
 https://github.com/code-423n4/2022-09-nouns-builder/blob/7e9fddbbacdd7d7812e912a369cfd862ee67dc03/src/manager/Manager.sol#L187
