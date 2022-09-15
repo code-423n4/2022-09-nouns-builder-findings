@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "GimelSec",
+  "address": "0x8595B7e8F4d3287248DB45AcA4Ba4EaCFe4Ab78e",
+  "risk": "3",
+  "title": "Anyone can cancel a proposal if the proposer's voting weight is equal to the threshold",
+  "issueId": 583,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/583"
+}
