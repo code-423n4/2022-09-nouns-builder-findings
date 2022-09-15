@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "cryptphi",
+  "address": "0x876133657f5356e376b7ae27d251444727ce9488",
+  "risk": "3",
+  "title": "Unchecked return value of WETH.transfer can allow to bid for free",
+  "issueId": 669,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/669"
+}
