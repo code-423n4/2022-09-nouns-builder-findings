@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "0x4non",
+  "address": "0x38c40ead3d0fe7959eb9dfe8337b3c4929884d2c",
+  "risk": "3",
+  "title": "Its possible to underflow votes using  `delegate` and `delegateBySig` on `ERC721Votes.sol`",
+  "issueId": 498,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/498"
+}
