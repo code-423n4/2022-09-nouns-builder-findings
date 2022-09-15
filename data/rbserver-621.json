@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rbserver",
+  "address": "0x4bd9605a3e546f3400df2c2be7b1c775aeea56bd",
+  "risk": "2",
+  "title": "User A can cancel User B's proposal when User B's past number of votes is same as proposal threshold, which contradicts the fact that User B actually can create the proposal when her or his past number of votes and proposal threshold are same",
+  "issueId": 621,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/621"
+}
