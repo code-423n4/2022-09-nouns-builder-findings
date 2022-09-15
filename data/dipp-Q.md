@@ -1,4 +1,4 @@
-# [L-01] No limits for auction ```duration```, ```timeBuffer```, ```minIncrement``` and ```reservePrice``` in ```Auction.sol```
+# [L-01] No limits for auction ```duration```, ```timeBuffer```, ```minBidIncrement``` and ```reservePrice``` in ```Auction.sol```
 
 ## Line References
 
@@ -14,9 +14,9 @@
 
 ## Description
 
-The ```duration``` variable in ```Auction.sol``` is used to set the auction endTime and determines how long an auction is active (unless extended). If the duration is set to be too long (100 days instead of 10 days, for example) it could lead to a DAO not being able to 
+The ```duration``` variable in ```Auction.sol``` is used to set the auction endTime and determines how long an auction is active (unless extended). The duration could mistakenly be set for much longer than intended (100 days instead of 10 days, for example) which, if an auction starts with this duration, could lead massive delays for the DAO.
 
-The ```timeBuffer``` is used to determine whether an auction should be extended or not. If the remaining time in an auction is less than the timeBuffer but more than 0 then the auction is extended by the amount of the timeBuffer. A very long time buffer could extend the auction for a very long time as it would be very likely to be extended everytime a bid is made.
+The ```timeBuffer``` is used to determine whether an auction should be extended or not. If the remaining time in an auction is less than the timeBuffer but more than 0 then the auction is extended by the amount of the timeBuffer. A very long timeBuffer could extend the auction for a very long time as it would be very likely to be extended everytime a bid is made.
 
 The ```minBidIncrement``` should never be 0. If 0 then ```createBid``` could be called using the same bid amount as the current highest bid, so users would be able to bid in an auction without increasing the bid for the token.
 
@@ -24,11 +24,11 @@ Similarly, no limits on the ```reservePrice``` could lead to the same scenario w
 
 ## Recommended Mitigation Steps
 
-Add upper and lower limits for ```settings.duration``` in the ```initialize``` and ```setDuration``` functions of ```Auction.sol```.
+Consider adding upper and lower limits for the ```duration``` in the ```initialize``` and ```setDuration``` functions of ```Auction.sol```.
 
-The ```timeBuffer``` should at least be checked to be less than the ```duration``` in the ```initialize``` and ```setTimeBuffer``` functions.
+The ```timeBuffer``` should at least be checked to be less than the ```duration``` in ```initialize``` and ```setTimeBuffer```.
 
-Check that the ```minBidIncrement``` and ```reservePrice``` are more than 0 in the ```initialize```, ```setMinimumBidIncrement``` and ```setReservePrice```.
+Check that the ```minBidIncrement``` and ```reservePrice``` are more than 0 in the ```initialize```, ```setMinimumBidIncrement``` and ```setReservePrice``` functions.
 
 
 
@@ -51,7 +51,7 @@ Check that the ```minBidIncrement``` and ```reservePrice``` are more than 0 in t
 
 ## Description
 
-The ```delay``` is used to allow users of the DAO to react to changes before they are executed. Since there is no minimum limit to which the delay can be set, changes can be made instantly when queued. If an attacker is able to queue arbitrary proposals and the delay is very short, users interacting with the DAO to react to the changes made by the attacker.
+The ```delay``` is used to allow users of the DAO to react to changes before they are executed. Since there is no minimum limit to which the delay can be set, changes can be made instantly when queued. If an attacker is able to queue arbitrary proposals and the delay is very short, users interacting with the DAO will have very little time to react to the changes made by the attacker.
 
 ## Recommended Mitigation Steps
 
@@ -61,7 +61,7 @@ Consider adding a lower bound for the ```delay``` in the ```initialize``` and ``
 
 
 
-# [L-03] If a property has 0 items then tokens cannot be minted
+# [L-03] If a property has 0 items then tokens cannot be minted temporarily
 
 ## Line References
 
@@ -74,7 +74,7 @@ When a token is minted the ```onMinted``` function in ```MetadataRenderer.sol```
 
 ## Impact
 
-This could prevent new tokens from being minted which could lead to auctions not able to be settled. This could lead to unnecessary delays for creating new auctions as items would need to be added to the property with not items. Since the treasury is the owner of the ```MetadataRenderer.sol``` contract at this point, a proposal will have to be made and executed to call ```addProperties```.
+This could prevent new tokens from being minted which could lead to auctions not able to be settled and could cause unnecessary delays for creating new auctions as items would need to be added to the properties with no items. Adding properties would take some time since the treasury is the owner of the ```MetadataRenderer.sol``` contract at this point and a proposal will have to be made and executed to call ```addProperties```.
 
 ## Proof of Concept
 
