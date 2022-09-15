@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "WatchDogs",
+  "address": "0xef9f3854cc6e113f6e79f5b2f0315098c202763b",
+  "risk": "2",
+  "title": "Unhandled return values of  transferFrom",
+  "issueId": 475,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/475"
+}
