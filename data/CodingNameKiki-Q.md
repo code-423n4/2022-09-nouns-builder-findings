@@ -51,13 +51,13 @@ Clear function names can increase readability. Follow a standard convertion func
 
 src/auction/Auction.sol
 (Before) 277: function treasury() external view returns (address) {
-(After) 277: function addressTreasury() external view returns (address) {
+(After) 277: function getTreasuryAddress() external view returns (address) {
 (Before) 282: function duration() external view returns (uint256) {
-(After) 282: function auctionDuration() external view returns (uint256) {
+(After) 282: function getAuctionDuration() external view returns (uint256) {
 (Before) 287: function reservePrice() external view returns (uint256) {
-(After) 287: function auctionReservePrice() external view returns (uint256) {
+(After) 287: function getAuctionReservePrice() external view returns (uint256) {
 (Before) 292: function timeBuffer() external view returns (uint256) {
-(After) 292: function minimumTimeBuffer() external view returns (uint256) {
+(After) 292: function getMinimumTimeBuffer() external view returns (uint256) {
 
 5. Consider addings checks for signature malleability
 
