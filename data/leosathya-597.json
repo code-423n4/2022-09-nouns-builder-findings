@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "leosathya",
+  "address": "0x27e6e77e29becf2c231d7333959ae9efb0de51ee",
+  "risk": "2",
+  "title": "CONTRACT(Auction.sol) TRYING TO PUSH RATHER THAN IMPLEMENTING PULL METHOD FOR ETH TRANSFER THAT LEAD TO LOSS OF FUND",
+  "issueId": 597,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/597"
+}
