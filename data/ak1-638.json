@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ak1",
+  "address": "0xf7a08c2c341bde5e17103d4780d1b465011a2a31",
+  "risk": "2",
+  "title": "Auction.sol : Owner can unilaterly set the minBidIncrement  value as per their wish",
+  "issueId": 638,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/638"
+}
