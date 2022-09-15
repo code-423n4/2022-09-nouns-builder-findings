@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "hyh",
+  "address": "0x8efE50a4b8c8B64FDC93a5b1712Fd735d8223cD5",
+  "risk": "3",
+  "title": "Execute doesn't check for the expiration of a proposal",
+  "issueId": 510,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/510"
+}
