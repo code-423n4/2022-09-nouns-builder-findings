@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Deivitto",
+  "address": "0xa322bD417154D04d5704952E550288f0f91044Bd",
+  "risk": "2",
+  "title": "# ERC20 transfer with not checked return value",
+  "issueId": 694,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/694"
+}
