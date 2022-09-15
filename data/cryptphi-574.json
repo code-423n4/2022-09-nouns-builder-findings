@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "cryptphi",
+  "address": "0x876133657f5356e376b7ae27d251444727ce9488",
+  "risk": "2",
+  "title": "Missing zero value check could cause bids of 0 amount or same amount as previous bid",
+  "issueId": 574,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/574"
+}
