@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ayeslick",
+  "address": "0x7ccdb6979cb9dfa867b842fae8243b3b3fda444d",
+  "risk": "2",
+  "title": "Normal DAO Operations can be disrupted if some initial parameters are set too high or low",
+  "issueId": 442,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/442"
+}
