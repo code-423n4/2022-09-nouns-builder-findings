@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "zkhorse",
+  "address": "0xA1c57d5B50f99E8455c8a1Bc167fA68572e5ACbA",
+  "risk": "2",
+  "title": "`Ownable`: Pending owner is not cleared by `transferOwnership`",
+  "issueId": 414,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/414"
+}
