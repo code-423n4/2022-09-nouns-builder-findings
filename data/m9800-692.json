@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "m9800",
+  "address": "0x367bf4a80da0ed955dbefb228c60fdf20c2f85b2",
+  "risk": "3",
+  "title": "Ddos in Governor.sol",
+  "issueId": 692,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/692"
+}
