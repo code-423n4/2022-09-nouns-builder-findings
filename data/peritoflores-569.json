@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "peritoflores",
+  "address": "0xcc9c3d6ed709d47255815ff5b5bb17a745b7ceed",
+  "risk": "3",
+  "title": "[H1] Incorrect   `baseTokenId` calculation",
+  "issueId": 569,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/569"
+}
