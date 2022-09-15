@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ret2basic",
+  "address": "0x75a24dc4efc5324f2253abacb98a296ac49448ca",
+  "risk": "G",
+  "title": "Gas Optimizations",
+  "issueId": 502,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/502"
+}
