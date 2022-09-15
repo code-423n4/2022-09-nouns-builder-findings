@@ -321,8 +321,8 @@ governance.sol:351
 ```
 ## issue with initializer function ,its high risk but out of scope
 You can initialize again even after its deployed and the attacker can steal funds with changing  initilizion function
- you can initializer  even if your not owner and since  its works like this ex:
-lets say isTopLevelCall=true || true && true || false so the whole statement because of && makes this vulnerable to issues 
+ an attacker can call  initialize   even if your not owner and since  its works like this ex:
+lets say isTopLevelCall=true || true && true || false = false so the whole statement  is false because of && and `  _initialized != 1` makes this vulnerable to issues 
 lock it like re-entrancy  this whole funcioninlllity like this is wrong 
 steps:
 deployer initializes in auction.sol:initialize 
@@ -331,8 +331,7 @@ then when the attacker calls it
 `isTopLevelCall=false`
 and it will be true || true && true  || false which will be true && false =false and it wont revert causing an attacker to inilitiaze again.
 `        if ((!isTopLevelCall || _initialized != 0) && (Address.isContract(address(this)) || _initialized != 1)) revert ALREADY_INITIALIZED();`
-deployer initializes in auction.sol:initialize
-then an attacker can call it again and steal funds and make the deployer redoply and cause a whole lot of problems for the protocol 
+right now it not exploitable beacuse of manager check but if in the future you dont do this it wll be vunlernable 
 
 https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v4.7/contracts/proxy/utils/Initializable.sol
 they dont do `_initilize!=1` 
