@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Tomo",
+  "address": "0x237c8aea434de4784d23d145069c6d0bef629a19",
+  "risk": "2",
+  "title": "Use safeMint for ERC721",
+  "issueId": 445,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/445"
+}
