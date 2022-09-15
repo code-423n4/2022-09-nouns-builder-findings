@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Deivitto",
+  "address": "0xa322bD417154D04d5704952E550288f0f91044Bd",
+  "risk": "2",
+  "title": "# _safeMint() should be used rather than _mint() wherever possible",
+  "issueId": 697,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/697"
+}
