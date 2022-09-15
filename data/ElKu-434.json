@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "ElKu",
+  "address": "0x819681641e07e80f817a34f82400debcc2579b98",
+  "risk": "2",
+  "title": "getPastVotes in ERC721Votes.sol wouldn't return any value if the input _timestamp does not match exactly with any of the block times",
+  "issueId": 434,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/434"
+}
