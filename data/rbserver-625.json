@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "rbserver",
+  "address": "0x4bd9605a3e546f3400df2c2be7b1c775aeea56bd",
+  "risk": "2",
+  "title": "Calling Governor.execute and Treasury.execute functions reverts if one of the proposal's actions reverts, which causes other actions that could go through to revert as well",
+  "issueId": 625,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/625"
+}
