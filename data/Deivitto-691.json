@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "Deivitto",
+  "address": "0xa322bD417154D04d5704952E550288f0f91044Bd",
+  "risk": "2",
+  "title": "Use of transfer() instead of call() to send eth",
+  "issueId": 691,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/691"
+}
