@@ -1,3 +1,5 @@
+# Token._getNextTokenId is ineffficient
+
 In file Token.sol the function `_getNextTokenId(_tokenId)` is very inefficient.
 
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L130
@@ -8,11 +10,11 @@ The function call can be seen at line 110:
 
 https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/token/Token.sol#L110
 
-# Recommendation
+## Recommendation
 
 Since he tokenIds seem incremental the contract should save the next available tokenId in a storage variable. If any of the Ids realease under the "next available token Id" it should be stored in a storage array. The contract can later choose to fill those gaps up first or to just choose the "next available tokenId"
 
-# Pseudo code for recommendation
+## Pseudo code for recommendation
 
 ```solidity
     function _getNextTokenId() internal view returns (uint256) {
@@ -45,3 +47,9 @@ function _deleteTokenId(uint256 _tokenId) internal {
 Please note that `nextUnusedAvailableIndex` should be incremented after reusing the index.
 
 For easier readibility I did not cache storage variables in the example implementation of these functions but in the production ready implementation they should be cached.
+
+# Non cached variable was used in Auction.
+
+`auction` was cached to local memory variable `_auction` but in line 172 the global, storage variable was used using unnecessary gas.
+
+https://github.com/code-423n4/2022-09-nouns-builder/blob/main/src/auction/Auction.sol#L172
