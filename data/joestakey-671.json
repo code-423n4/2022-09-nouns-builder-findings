@@ -1,0 +1,9 @@
+{
+  "contest": 157,
+  "handle": "joestakey",
+  "address": "0xa9c2ce9dcc090af921fb0a1f874962f65a4b6d9b",
+  "risk": "2",
+  "title": "Delegatee calling `castVoteBySig()` can be front run by signer.",
+  "issueId": 671,
+  "issueUrl": "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues/671"
+}
