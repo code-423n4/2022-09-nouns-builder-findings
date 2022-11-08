@@ -8,7 +8,7 @@ Unless otherwise discussed, this repo will be made public after contest completi
 
 ## Contest findings are submitted to this repo
 
-As a sponsor, you have four critical tasks in the contest process:
+As a sponsor, you have three critical tasks in the contest process:
 
 1. Weigh in on severity.
 2. Respond to issues.
