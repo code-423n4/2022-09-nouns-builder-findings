@@ -1,3 +1,11 @@
+---
+sponsor: "Nouns Builder"
+slug: "2022-09-nouns-builder"
+date: "2022-11-03"
+title: "Nouns Builder contest"
+findings: "https://github.com/code-423n4/2022-09-nouns-builder-findings/issues"
+contest: 157
+---
 
 # Overview
 
